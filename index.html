@@ -1,13 +1,49 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Documentation for the plants-*** repositories
-  </h1>
+
+<body class="w-full h-full ">
+    <div class="flex flex-col w-full">
+        <h1 class="py-10 px-8 flex text-4xl text-green-600">
+            Documentation for the plants repositories
+        </h1>
+        <div class="flex flex-col w-full px-8">
+            <div class="pt-2 text-lg ">The idea</div>
+            <div class="pt-2">
+                use a Raspberry Pi to automate the watering of plants.
+            </div>
+            <div class="pt-2 text-lg ">Specifically</div>
+            <div class="pt-2">trigger water pumps based on readings from humidity sensors in the soil of each plant.
+            </div>
+            <div class="pt-2 text-lg ">Overkill</div>
+            <div class="pt-2">send the sensors' data every second to Google Cloud's integrated messaging broker
+                (pub/sub).
+                The messages will then be consumed by a backend Java application (hosted on Google Cloud) which will
+                send
+                information to the frontend angular app (hosted on the cloud as well).
+            </div>
+            <div class="pt-2 text-2xl">Overview</div>
+            <div class="pt-2 flex w-1/2">
+                <img src="images/software-diagram.png" alt="software-diagram">
+            </div>
+            <div class="pt-2 text-xl">How it all connnects - hardware</div>
+            <ul class="list-disc"> Navigate to specific documentation for this project:
+                <li class="pl-4"><a class="text-green-600 hover:underline" href="./doc-gcp.html">Google Cloud</a>
+                </li>
+                <li class="pl-4"><a class="text-green-600 hover:underline" href="./doc-raspberrypi.html">RaspberryPi</a>
+                </li>
+                <li class="pl-4"><a class="text-green-600 hover:underline" href="./doc-backend.html">Backend (Java application)</a>
+                </li>
+                <li class="pl-4"><a class="text-green-600 hover:underline" href="./doc-frontend.html">Frontend (Angular application)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
+
 </html>
